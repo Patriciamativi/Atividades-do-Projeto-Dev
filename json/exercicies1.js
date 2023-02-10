@@ -9,12 +9,12 @@ console.log("###################### 1 ######################")
  //     return numberTwo
 }
 
-console.log(greatestNumber(1148,1148));
+console.log(greatestNumber(1148, 1148));
 
 console.log("###################### 2 ######################")
 // Write a program that takes an integer and then uses a loop to print all numbers from 1 to the entered number.
-function loopInNumber(number){
-  for (let i = 1; <= number; i++){
+function loopInNumber(number) {
+  for (let i = 1; <= number; i++) {
     console.log(i)
   }
 }
@@ -23,8 +23,8 @@ console.log(loopInNumber(9))
 
 console.log("###################### 3 ######################")
 // Write a program that takes a word and then uses a loop to print each letter of the word on a different line.
-function printLetterOfWord(word){
-  for(let i = 1; i < word.length; i++)
+function printLetterOfWord(word) {
+  for (let i = 1; i < word.length; i++)
 }
 
 printLetterOfWord('Morango')
@@ -43,7 +43,7 @@ console.log("###################### 5 ######################")
 //
 //}
 
-function checkAge(age){
+function checkAge(age) {
   return age >= 18 ? console.log('Maior de idade') : console.log('menor de idade')
 }
 checkAge(15)
@@ -76,7 +76,7 @@ console.log(calculator(7,8'/'))*/
 console.log("###################### 7 ######################")
 // Write a program that uses a loop to read three numbers from the user and print the largest one.
 //function maxNumber(numberOne, numerTwo, numberTree){
- // return Math.max{numberOne, numerTwo, numberTree}
+// return Math.max{numberOne, numerTwo, numberTree}
 //}
 
 //console.log(maxNumber(78,91,85))
@@ -84,8 +84,8 @@ console.log("###################### 7 ######################")
 console.log("###################### 8 ######################")
 // Write a function called "fibonacci" that takes an integer as a parameter and returns the nth number of the Fibonacci sequence.
 
-var i;
-var fib = [0, 1];
+let i;
+let fib = [0, 1];
 
 for (i = 2; i <= 10; i++) {
   fib[i] = fib[i - 2] + fib[i - 1];
@@ -99,17 +99,17 @@ let inicio = 1
 let soma = 0
 
 while (inicio <= n) {
-    soma += inicio
-    inicio += 1
+  soma += inicio
+  inicio += 1
 }
 
 
 somarNumeros = (n) => {
-    if (n <= 1){
-        return 1
-    } else {
-        return n + somarNumeros(n-1)
-    }
+  if (n <= 1) {
+    return 1
+  } else {
+    return n + somarNumeros(n - 1)
+  }
 }
 
 const n = parseInt(prompt('Digite um número'))
