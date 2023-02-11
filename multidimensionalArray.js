@@ -24,16 +24,33 @@ Examples:
 
 */
 
-function array [];
-let rows ()
-let column
-let diagonal
 
-for (let i = 0; i < array.length; i++) {
-    for (let j = 0; j < array[i].length; j++) {
-    console.log(array[i][j])
+function ticTacToe(arrayTicTacToe) {
+    for (let i = 0; i < arrayTicTacToe.length; i++) {
+        if (arrayTicTacToe[i][0] === arrayTicTacToe[i][1] && arrayTicTacToe[i][1] === arrayTicTacToe[i][2])  {
+            return `Win player1 ${arrayTicTacToe[i][1]}`
+        }
+    }
+    for (let i= 0; i < arrayTicTacToe.length; i++){
+        if (arrayTicTacToe[0][i] === arrayTicTacToe[1][i] && arrayTicTacToe[1][i] === arrayTicTacToe[2][i]){
+            return `Win player2 ${arrayTicTacToe[0][i]}`
+        }
+    }
+    if (arrayTicTacToe[0][0] === arrayTicTacToe[1][1] && arrayTicTacToe[1][1] === arrayTicTacToe[2][2]){
+        return `Win player3 ${arrayTicTacToe[0][0]}`
+    }
+    if (arrayTicTacToe[0][2] === arrayTicTacToe[1][1] && arrayTicTacToe[1][1] === arrayTicTacToe[2][0]){
+        return `Win player4 ${arrayTicTacToe[2][0]}`
+    }
+    return `There was a tie ${arrayTicTacToe}`
 }
-}
+let testArray = [
+    ['x', 'o', 'x'],
+    ['o', 'x', 'o'],
+    ['o', 'x', 'o']
+]
+
+console.log(ticTacToe(testArray))
 
 console.log("###################### 2 ######################")
 // Create an array to represent an image and write a function to rotate it 90 degrees clockwise.
@@ -68,3 +85,56 @@ Examples:
 ]
 
 */
+
+
+
+
+
+
+cidade  const =  require ("./city.json");
+ estados  const =  requerem ("./estados.json");
+
+let minhaCidade = "Alegre";
+
+const minhaCidade = () => {
+    for (const x  na  cidade ) {
+        elemento  const = cidade[x] ;
+    if (elemento.Nome === minhaCidade) {
+       elemento de retorno;
+        }
+}
+};
+
+const estadoId = () => {
+    return minhaCidade().Estado;
+};
+
+const stateName = (id) => {
+    for (const e  em  estados ) {
+        elemento  const = estados[e] ;
+    if (elemento.ID === id) {
+       elemento de retorno.Nome;
+        }
+}
+};
+
+const listOfCitiesOfMyEstate = () => {
+    const idState = estadoId();
+  deixe  cidades = [];
+    for (const x  na  cidade ) {
+        elemento  const = cidade[x] ;
+    if (elemento.Estado === idState) {
+            cidades.empurre({
+                id: ` ${elemento.ID} `,
+                nome: ` ${elemento.Nome} `,
+                estado: ` ${elemento.Estado} `,
+            });
+        }
+}
+   cidades de retorno;
+};
+
+console.log(minhacidade());
+console.log(estadoId(minhaCidade()));
+console.log("|" + Object.values(minhaCidade()) + "|" + stateName(stateId()) + "|");
+console.log(listOfCitiesOfMyEstate(stateId(minhaCidade())));
