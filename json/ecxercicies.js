@@ -2,11 +2,11 @@
 
 console.log("###################### 1 ######################")
 // Write a function called "greatestNumber" that takes two numbers as parameters and returns the larger number.
-//function greatestNumber(numberONe, numberTwo) {
- // if(numberONe > numberTwo) {
-//    return numberOne
+function greatestNumber(numberONe, numberTwo) {
+  if(numberONe > numberTwo) {
+    return numberOne
     }
- //     return numberTwo
+      return numberTwo
 }
 
 console.log(greatestNumber(1148,1148));
@@ -38,10 +38,10 @@ function multiplyTable(number) {
 multiplyTable(44)
 console.log("###################### 5 ######################")
 // Write a program that takes an age as a parameter and then uses a conditional structure to check whether the person is of legal age (18 years or older) or a minor.
-//function checkAge(age){
-// return age >= 18 ?
-//
-//}
+function checkAge(age){
+ return age >= 18 ?
+
+}
 
 function checkAge(age){
   return age >= 18 ? console.log('Maior de idade') : console.log('menor de idade')
@@ -50,7 +50,7 @@ checkAge(15)
 
 console.log("###################### 6 ######################")
 // Write a function called "calculator" that takes three parameters: two numbers and a math operation (for example, "+", "-", "*", "/"). The function must return the result of the mathematical operation applied to the two numbers.
-/*function calculator(numberONe, numberTwo, mathOperator){
+function calculator(numberONe, numberTwo, mathOperator){
 switch (mathOperator){
   case '+':
     return umberOne + numberTwo
@@ -71,25 +71,28 @@ switch (mathOperator){
 console.log(calculator(7,8'*'))
 console.log(calculator(7,8'+'))
 console.log(calculator(7,8'-'))
-console.log(calculator(7,8'/'))*/
+console.log(calculator(7,8'/'))
 
 console.log("###################### 7 ######################")
 // Write a program that uses a loop to read three numbers from the user and print the largest one.
-//function maxNumber(numberOne, numerTwo, numberTree){
- // return Math.max{numberOne, numerTwo, numberTree}
-//}
+function maxNumber(numberOne, numerTwo, numberTree){
+  return Math.max{numberOne, numerTwo, numberTree}
+}
 
-//console.log(maxNumber(78,91,85))
+console.log(maxNumber(78,91,85))
 
 console.log("###################### 8 ######################")
 // Write a function called "fibonacci" that takes an integer as a parameter and returns the nth number of the Fibonacci sequence.
+function fibonacci(int){
+let sum = 1;
+let number = 1;
+let lastNumber = 0;
 
-var i;
-var fib = [0, 1];
+for(i = 0; i <= int; i++){
+  lastNumber += sum + number;
+}
 
-for (i = 2; i <= 10; i++) {
-  fib[i] = fib[i - 2] + fib[i - 1];
-  console.log(fib[i]);
+return lastNumber;
 }
 
 console.log("###################### 9 ######################")
@@ -121,15 +124,15 @@ console.log(soma)
 
 console.log("###################### 10 ######################")
 // Write a function called "checkPalindrome" that takes a string as a parameter and returns "true" if the string is a palindrome (that is, if the string is the same when read backwards) and "false" otherwise.
-// function checkPalindrome(word) {
-//     let revertWord = ''
-//     for(let i = word.length - 1; i >= 0; i--) {
-//         revertWord += word[i]
-//     }
-//     return word === revertWord
-// }
+function checkPalindrome(word) {
+    let revertWord = ''
+     for(let i = word.length - 1; i >= 0; i--) {
+         revertWord += word[i]
+    }
+    return word === revertWord
+ }
 
-// console.log(checkPalindrome('BANANA'))
-// console.log(checkPalindrome('RIR'))
-// console.log(checkPalindrome('ANA'))
-// console.log(checkPalindrome('Laranja'))
+ console.log(checkPalindrome('BANANA'))
+ console.log(checkPalindrome('RIR'))
+ console.log(checkPalindrome('ANA'))
+ console.log(checkPalindrome('Laranja'))
