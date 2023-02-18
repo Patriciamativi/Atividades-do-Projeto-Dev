@@ -24,16 +24,33 @@ Examples:
 
 */
 
-function array [];
-let rows ()
-let column
-let diagonal
 
-for (let i = 0; i < array.length; i++) {
-    for (let j = 0; j < array[i].length; j++) {
-    console.log(array[i][j])
+function ticTacToe(arrayTicTacToe) {
+    for (let i = 0; i < arrayTicTacToe.length; i++) {
+        if (arrayTicTacToe[i][0] === arrayTicTacToe[i][1] && arrayTicTacToe[i][1] === arrayTicTacToe[i][2]) {
+            return `Win player1 ${arrayTicTacToe[i][1]}`
+        }
+    }
+    for (let i = 0; i < arrayTicTacToe.length; i++) {
+        if (arrayTicTacToe[0][i] === arrayTicTacToe[1][i] && arrayTicTacToe[1][i] === arrayTicTacToe[2][i]) {
+            return `Win player2 ${arrayTicTacToe[0][i]}`
+        }
+    }
+    if (arrayTicTacToe[0][0] === arrayTicTacToe[1][1] && arrayTicTacToe[1][1] === arrayTicTacToe[2][2]) {
+        return `Win player3 ${arrayTicTacToe[0][0]}`
+    }
+    if (arrayTicTacToe[0][2] === arrayTicTacToe[1][1] && arrayTicTacToe[1][1] === arrayTicTacToe[2][0]) {
+        return `Win player4 ${arrayTicTacToe[2][0]}`
+    }
+    return `There was a tie`
 }
-}
+let testArray = [
+    ['x', 'o', 'x'],
+    ['o', 'x', 'o'],
+    ['o', 'x', 'o']
+]
+
+console.log(ticTacToe(testArray))
 
 console.log("###################### 2 ######################")
 // Create an array to represent an image and write a function to rotate it 90 degrees clockwise.
@@ -68,3 +85,28 @@ Examples:
 ]
 
 */
+
+function clockwise(matrix) {
+    let multidimensionalArray = [];
+    for (let i = 0; i < matrix[0].length; i++) {
+        let line = [];
+        for (j = matrix[0].length-1; j >= 0; j--) {
+            line.push(matrix[j][i]);
+        }
+        multidimensionalArray.push(line)
+    }
+    return multidimensionalArray;
+}
+
+let testMatrix1 = [
+    [1, 2, 3],
+    [4, 5, 6],
+    [7, 8, 9]
+]
+
+let testMatrix2 = [
+    ['A', 'A', 'A', 'A', 'A'],
+    ['B', 'B', 'B', 'B', 'B'],
+    ['C', 'C', 'C', 'C', 'C'],
+]
+console.log(clockwise(testMatrix1));
